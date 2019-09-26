@@ -1,5 +1,5 @@
+import javafx.application.Application;
 
-
-public class Server {
+abstract class Server extends Application {
 
 }
