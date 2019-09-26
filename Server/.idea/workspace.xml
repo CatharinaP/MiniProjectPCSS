@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6a7de52-8387-4f72-a0a9-837ddd3e6f1a" name="Default Changelist" comment="test" />
+    <list default="true" id="a6a7de52-8387-4f72-a0a9-837ddd3e6f1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,12 +18,11 @@
     <option name="width" value="1440" />
     <option name="height" value="801" />
   </component>
-  <component name="ProjectId" id="1RMsYjBZ4IbGQc0UrYmjB1RJpxH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569488244922" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569487990654" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -59,8 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569486372768</updated>
       <workItem from="1569486374171" duration="243000" />
-      <workItem from="1569487773807" duration="493000" />
-      <workItem from="1569488354655" duration="495000" />
+      <workItem from="1569487773807" duration="254000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1569487208984</created>
@@ -83,21 +83,7 @@
       <option name="project" value="LOCAL" />
       <updated>1569487679151</updated>
     </task>
-    <task id="LOCAL-00004" summary="test">
-      <created>1569488043937</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1569488043937</updated>
-    </task>
-    <task id="LOCAL-00005" summary="test">
-      <created>1569488700979</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1569488700979</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
