@@ -1,6 +1,8 @@
-
 import javafx.application.Application;
 
 abstract class Server extends Application {
-private int sessionNo=1;
+// line 11 in book
+// implements Constants {}
+
+
 }
