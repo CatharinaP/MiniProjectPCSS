@@ -1,3 +1,5 @@
+import javafx.application.Application;
+
 public class Server {
-    int a = 5;
+    public class TicTacToeServer extends Application;
 }
