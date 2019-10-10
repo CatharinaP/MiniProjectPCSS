@@ -1,22 +1,33 @@
 
-import javafx.application.Application;
 
-abstract class Server extends Application implements Constants {
 
+import java.awt.*;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Date;
+
+
+public class Server  implements Constants {
  //   private int sessionNo = 1;
     //  private int person = 0;
-TextArea text = new TextArea();
+   int clientNo= 0;
+   int port = 7500;
 
-    new Thread( () -> {
-        try {
-            ServerSocket serverSocket = new ServerSocket(100);
-            Platform.runLater(() -> text.appendText(new Date() + ": Server started at socket 100/n"));
+   Thread thread= new Thread (()->{
+try {
+    ServerSocket server = new ServerSocket(port);
 
-            // ready to create a session for every two player
-            while (true) {
-                Platform.runLater(() - > text.appendText(new Date() + ": Wait for players to join session " + sessionNo + 'n');
-            });
-        }
+    while (true){
+        Socket socket = server.accept();
+
+        clientNo++;
+
+        new Thread(new HandleASession(socket)).start();
     }
+} catch (IOException e) {
+    e.printStackTrace();
 }
+
+   }).start();
 }
