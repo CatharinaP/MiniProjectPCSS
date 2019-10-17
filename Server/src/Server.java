@@ -24,7 +24,7 @@ public class Server implements Constants {
                     System.out.println("host name " + inetAddress.getHostName());
                     System.out.println("IP address " + inetAddress.getHostAddress());
 
-                    new Thread(new HandleASession(socket)).start();
+                    new Thread(new HandleASession(socket, socket)).start();
                 }
             } catch (IOException e) {
                 System.err.println(e);
