@@ -13,8 +13,10 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
+
 
 
     @Override
@@ -26,18 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        try {
-            Socket connectToServer = new Socket ("localhost", 7500);
-            System.out.println("Connected to the server");
-            DataInputStream isFromServer = new DataInputStream (connectToServer.getInputStream());
-            DataOutputStream osFromServer = new DataOutputStream (connectToServer.getOutputStream());
-
-        } catch(IOException e) {
-            System.err.println(e);
-        }
-
-        //Main();
 
 
     }
@@ -63,8 +53,15 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     public void startGame(View view){
+        System.out.println("Connecting to server");
+        Intent intent1 = new Intent (this, Client.class);
+        startActivity(intent1);
+
         Intent intent= new Intent(this, Selection.class);
         startActivity(intent);
+
+
+
     }
 
 
