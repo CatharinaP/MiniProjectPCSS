@@ -13,9 +13,10 @@ public class Server  implements Constants {
         int port = 7500;
 
         Thread thread = new Thread(() -> {
+
             try {
                 ServerSocket server = new ServerSocket(port);
-                System.out.println("Server is running")
+                System.out.println("Server is running");
 
                 while (true) {
                     Socket socket = server.accept();
