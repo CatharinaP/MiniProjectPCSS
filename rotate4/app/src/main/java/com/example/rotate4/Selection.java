@@ -11,6 +11,8 @@ public class Selection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        System.out.println("Class Selection is working");
        // Log.d("myTag", "This is my message");
 
 
