@@ -18,6 +18,7 @@
         <activity android:name=".DesktopWar"/>
         <activity android:name=".Puzzle"/>
         <activity android:name=".EndScreen"/>
+        <activity android:name=".Client"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
