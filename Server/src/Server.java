@@ -19,13 +19,16 @@ public class Server implements Constants {
                 while (true){
                     Socket socket = serverSocket.accept();
                     clientNo++;
+                    System.out.println("Client connected");
 
                     InetAddress inetAddress = socket.getInetAddress();
                     System.out.println("Client no " + clientNo);
                     System.out.println("host name " + inetAddress.getHostName());
                     System.out.println("IP address " + inetAddress.getHostAddress());
 
-                    new Thread(new HandleASession(socket, socket)).start();
+
+                   new Thread(new HandleASession(socket)).start();
+
                 }
             } catch (IOException e) {
                 System.err.println(e);

@@ -7,24 +7,26 @@ class HandleASession implements Runnable, Constants {
 private Socket role1; // a connected socket
 private Socket role2;
 
-public HandleASession(Socket role1, Socket role2){
+public HandleASession(Socket role1){
     this.role1 = role1;
-    this.role2 = role2;
+   // this.role2 = role2;
 }
 
     public void run() {
 try {
     // create data input and output streams
     DataInputStream inputFromClient1 = new DataInputStream(role1.getInputStream());
-    DataInputStream inputFromClient2 = new DataInputStream(role2.getInputStream());
+   // DataInputStream inputFromClient2 = new DataInputStream(role2.getInputStream());
 
     DataOutputStream OutputToClient1 = new DataOutputStream(role1.getOutputStream());
-    DataOutputStream OutputToClient2 = new DataOutputStream(role2.getOutputStream());
+   // DataOutputStream OutputToClient2 = new DataOutputStream(role2.getOutputStream());
 
     // for serving the client
     while (true){
+        double waiting = inputFromClient1.readDouble();
+        System.out.println("Reading double");
 
-        
+
 
         // receive request to play
 
