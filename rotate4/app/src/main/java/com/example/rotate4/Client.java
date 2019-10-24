@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args){
+        System.out.println("Connected to server2");
         Scanner input = new Scanner (System.in);
         boolean connect = true;
 

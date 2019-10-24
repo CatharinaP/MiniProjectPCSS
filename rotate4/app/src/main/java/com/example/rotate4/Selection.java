@@ -11,6 +11,9 @@ public class Selection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+       // Log.d("myTag", "This is my message");
+
+
         //three first lines hide the bars, same in all activities
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();

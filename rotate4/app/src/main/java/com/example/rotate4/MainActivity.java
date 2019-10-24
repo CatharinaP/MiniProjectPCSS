@@ -53,11 +53,14 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     public void startGame(View view){
+        System.out.println("Connecting to server");
+        Intent intent1 = new Intent (this, Client.class);
+        startActivity(intent1);
+
         Intent intent= new Intent(this, Selection.class);
         startActivity(intent);
 
-        Intent intent1 = new Intent (this, Client.class);
-        startActivity(intent1);
+
 
     }
 
