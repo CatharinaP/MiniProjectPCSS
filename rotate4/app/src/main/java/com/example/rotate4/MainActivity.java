@@ -9,6 +9,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -22,7 +27,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        try {
+            Socket connectToServer = new Socket ("localhost", 7500);
+            System.out.println("Connected to the server");
+            DataInputStream isFromServer = new DataInputStream (connectToServer.getInputStream());
+            DataOutputStream osFromServer = new DataOutputStream (connectToServer.getOutputStream());
+
+        } catch(IOException e) {
+            System.err.println(e);
+        }
+
+        //Main();
+
+
     }
+
+ /*   void Main () {
+        boolean connect = true;
+        try {
+            Socket connectToServer = new Socket("localhost", 7500);
+            System.out.println("Connected to the server");
+            DataInputStream isFromServer = new DataInputStream (connectToServer.getInputStream());
+            DataOutputStream osFromServer = new DataOutputStream (connectToServer.getOutputStream());
+
+
+            while (connect) {
+                System.out.println("Waiting for player 2");
+                String waiting;
+            }
+
+        } catch (IOException var15) {
+            System.out.println(var15.toString() + "\n");
+
+        }
+    }*/
 
     public void startGame(View view){
         Intent intent= new Intent(this, Selection.class);
