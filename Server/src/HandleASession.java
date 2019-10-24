@@ -4,22 +4,22 @@ import java.io.IOException;
 import java.net.Socket;
 
 class HandleASession implements Runnable, Constants {
-private Socket socket1; // a connected socket
-private Socket socket2;
+private Socket role1; // a connected socket
+private Socket role2;
 
-public HandleASession(Socket socket1, Socket socket2){
-    this.socket1 = socket1;
-    this.socket2 = socket2;
+public HandleASession(Socket role1, Socket role2){
+    this.role1 = role1;
+    this.role2 = role2;
 }
 
     public void run() {
 try {
     // create data input and output streams
-    DataInputStream inputFromClient1 = new DataInputStream(socket1.getInputStream());
-    DataInputStream inputFromClient2 = new DataInputStream(socket2.getInputStream());
+    DataInputStream inputFromClient1 = new DataInputStream(role1.getInputStream());
+    DataInputStream inputFromClient2 = new DataInputStream(role2.getInputStream());
 
-    DataOutputStream OutputToClient1 = new DataOutputStream(socket1.getOutputStream());
-    DataOutputStream OutputToClient2 = new DataOutputStream(socket2.getOutputStream());
+    DataOutputStream OutputToClient1 = new DataOutputStream(role1.getOutputStream());
+    DataOutputStream OutputToClient2 = new DataOutputStream(role2.getOutputStream());
 
     // for serving the client
     while (true){
