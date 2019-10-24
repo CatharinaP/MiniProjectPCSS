@@ -23,6 +23,21 @@ try {
 
     // for serving the client
     while (true){
+
+        
+
+        // receive request to play
+
+        // assign character
+
+        // if 2 people in 1 room, start the game
+
+        // received turing = true
+        // send message
+
+
+
+
         // data exchange between the client and server
 
         // based on information from client 1, send the message to client 2
