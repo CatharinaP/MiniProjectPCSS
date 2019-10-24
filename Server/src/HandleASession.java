@@ -16,9 +16,9 @@ public HandleASession(Socket socket1, Socket socket2){
 try {
     // create data input and output streams
     DataInputStream inputFromClient1 = new DataInputStream(socket1.getInputStream());
-    DataInputStream inputFromClient2 = new DataInputStream(socket1.getInputStream());
+    DataInputStream inputFromClient2 = new DataInputStream(socket2.getInputStream());
 
-    DataOutputStream OutputToClient1 = new DataOutputStream(socket2.getOutputStream());
+    DataOutputStream OutputToClient1 = new DataOutputStream(socket1.getOutputStream());
     DataOutputStream OutputToClient2 = new DataOutputStream(socket2.getOutputStream());
 
     // for serving the client

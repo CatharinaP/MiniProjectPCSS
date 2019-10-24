@@ -11,19 +11,12 @@ public class Server implements Constants {
         new Thread(()-> {
             int clientNo = 0;
 
-    public static void main(String[] args) {
-
-        int clientNo = 0;
         int port = 7500;
 
-        Thread thread = new Thread(() -> {
-
-            try {
-                ServerSocket server = new ServerSocket(port);
+             try {
+                ServerSocket serverSocket = new ServerSocket(port);
                 System.out.println("Server is running");
 
-                while (true) {
-                    Socket socket = server.accept();
 
                 while (true){
                     Socket socket = serverSocket.accept();
