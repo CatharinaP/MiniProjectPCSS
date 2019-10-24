@@ -27,9 +27,9 @@ try {
 
         // based on information from client 1, send the message to client 2
 
-        String messageFromClient1 = inputFromClient1.readString();
+      //  String messageFromClient1 = inputFromClient1.readString();
 
-        OutputToClient2.writeString(messageFromClient1);
+       // OutputToClient2.writeString(messageFromClient1);
 
     }
 
