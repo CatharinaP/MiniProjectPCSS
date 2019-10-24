@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args){
-        System.out.println("Class Client is wokring");
+        System.out.println("Class Client is wokring pls");
         Scanner input = new Scanner (System.in);
         boolean connect = true;
 
