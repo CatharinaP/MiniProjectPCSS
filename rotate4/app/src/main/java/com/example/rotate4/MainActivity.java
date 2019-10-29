@@ -1,19 +1,11 @@
 package com.example.rotate4;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageButton;
-
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.Socket;
-import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
  /*   void Main () {
         boolean connect = true;
         try {
@@ -63,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
 }
 
