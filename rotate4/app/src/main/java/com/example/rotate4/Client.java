@@ -22,6 +22,8 @@ public class Client {
 
             while (connect){
                 System.out.print("While connected...");
+                outputStream.writeDouble(12);
+                
 
                 
 
