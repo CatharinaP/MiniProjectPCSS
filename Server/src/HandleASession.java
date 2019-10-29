@@ -45,7 +45,7 @@ try {
 
         // if 2 people in 1 room, start the game
 
-        if (fromPlayerFirst == 1 && fromPlayerSecond == 2){
+        if (fromPlayerFirst == 1 && fromPlayerSecond == 1){
             // start the game in one specific room
             System.out.println("First and Second player have requested to play");
 
@@ -61,10 +61,6 @@ try {
 
         }
 
-
-        // received turing = true
-
-        // send message
 
         // data exchange between the client and server
 
