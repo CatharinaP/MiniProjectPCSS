@@ -16,8 +16,6 @@ public HandleASession(Socket player1, Socket player2){
     this.player4 = player4;
 }
 
-    public HandleASession(Socket player1, Socket player2) {
-    }
 
     public void run() {
 try {
