@@ -6,27 +6,38 @@ import java.net.Socket;
 class HandleASession implements Runnable, Constants {
 private Socket role1; // a connected socket
 private Socket role2;
+private Socket role3;
+private Socket role4;
 
-public HandleASession(Socket role1){
+public HandleASession(){
     this.role1 = role1;
-   // this.role2 = role2;
+    this.role2 = role2;
+    this.role3 = role3;
+    this.role4 = role4;
 }
 
     public void run() {
 try {
-    // create data input and output streams
+    // input streams for 4 clients
+
     DataInputStream inputFromClient1 = new DataInputStream(role1.getInputStream());
-   // DataInputStream inputFromClient2 = new DataInputStream(role2.getInputStream());
+    DataInputStream inputFromClient2 = new DataInputStream(role2.getInputStream());
+
+    DataInputStream inputFromClient3 = new DataInputStream(role3.getInputStream());
+    DataInputStream inputFromClient4 = new DataInputStream(role4.getInputStream());
+
+    // output streams for 4 clients
 
     DataOutputStream OutputToClient1 = new DataOutputStream(role1.getOutputStream());
-   // DataOutputStream OutputToClient2 = new DataOutputStream(role2.getOutputStream());
+    DataOutputStream OutputToClient2 = new DataOutputStream(role2.getOutputStream());
+
+    DataOutputStream OutputToClient3 = new DataOutputStream(role3.getOutputStream());
+    DataOutputStream OutputToClient4 = new DataOutputStream(role4.getOutputStream());
 
     // for serving the client
     while (true){
         double waiting = inputFromClient1.readDouble();
         System.out.println("Reading double");
-
-
 
         // receive request to play
 
@@ -36,8 +47,6 @@ try {
 
         // received turing = true
         // send message
-
-
 
 
         // data exchange between the client and server
@@ -50,8 +59,8 @@ try {
 
     }
 
-} catch (IOException e) {
-    e.printStackTrace();
+    }    catch (IOException e) {
+        e.printStackTrace();
+     }
+    }
 }
-    }
-    }
