@@ -25,9 +25,6 @@ public class Client {
                 outputStream.writeDouble(12);
                 
 
-                
-
-
             }
         } catch (IOException ex){
             System.out.println("ex");
