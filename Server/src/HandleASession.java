@@ -9,7 +9,7 @@ private Socket role2;
 private Socket role3;
 private Socket role4;
 
-public HandleASession(){
+public HandleASession(Socket socket){
     this.role1 = role1;
     this.role2 = role2;
     this.role3 = role3;
@@ -39,11 +39,28 @@ try {
         double waiting = inputFromClient1.readDouble();
         System.out.println("Reading double");
 
+        boolean playerFirst = inputFromClient1.readBoolean();
+        boolean playerSecond = inputFromClient2.readBoolean();
+        boolean playerThird = inputFromClient3.readBoolean();
+        boolean playerForth = inputFromClient4.readBoolean();
+
         // receive request to play
 
         // assign character
 
         // if 2 people in 1 room, start the game
+
+        if (playerFirst == true && playerSecond == true){
+            // start the game in one specific room
+            System.out.println("First and Second player have requested to play");
+
+        }
+
+        if (playerThird == true && playerForth == true){
+
+            // start another game in another specific room
+            System.out.println("Third and Forth player have requested to play");
+        }
 
         // received turing = true
         // send message
