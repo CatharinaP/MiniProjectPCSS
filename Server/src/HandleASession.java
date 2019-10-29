@@ -6,8 +6,6 @@ import java.net.Socket;
 class HandleASession implements Runnable, Constants {
 private Socket player1; // a connected socket
 private Socket player2;
-private Socket player3;
-private Socket player4;
 
 public HandleASession(Socket player1, Socket player2){
     this.player1 = player1;
@@ -62,7 +60,7 @@ try {
             System.out.println("Player2 an Intelligens");
 
         }
-        
+
 
         // received turing = true
 
