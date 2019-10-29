@@ -19,7 +19,7 @@ public class Client extends AppCompatActivity {
         boolean connect = true;
 
         try {
-            Socket s = new Socket("localhost", 7500);
+            Socket s = new Socket("192.168.8.100.", 7500);
             System.out.println("Connected to server");
 
 
