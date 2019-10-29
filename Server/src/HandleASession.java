@@ -39,6 +39,7 @@ try {
     DataOutputStream OutputToClient4 = new DataOutputStream(player4.getOutputStream());
 
     // for serving the client
+    //test
     while (true){
         // test //
         double waiting = inputFromClient1.readDouble();
