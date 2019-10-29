@@ -22,6 +22,7 @@ public HandleASession(Socket player1, Socket player2){
     public void run() {
 try {
     // input streams for 4 clients
+    // another commit
 
     DataInputStream inputFromClient1 = new DataInputStream(player1.getInputStream());
     DataInputStream inputFromClient2 = new DataInputStream(player2.getInputStream());
@@ -38,6 +39,7 @@ try {
     DataOutputStream OutputToClient4 = new DataOutputStream(player4.getOutputStream());
 
     // for serving the client
+    //test
     while (true){
         // test //
         double waiting = inputFromClient1.readDouble();
