@@ -23,9 +23,11 @@ try {
 
     // for serving the client
     while (true){
-        double waiting = inputFromClient1.readDouble();
-        System.out.println("Reading double");
+        //double waiting = inputFromClient1.readDouble();
+        //System.out.println("Reading double");
 
+        boolean test = inputFromClient1.readBoolean();
+        System.out.println("Reading boolean: " + test);
 
 
         // receive request to play
