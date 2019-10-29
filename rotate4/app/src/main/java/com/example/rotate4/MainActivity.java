@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent1 = new Intent (this, Client.class);
         startActivity(intent1);
 
-        Intent intent= new Intent(this, Selection.class);
-        startActivity(intent);
+       // Intent intent= new Intent(this, Selection.class);
+        //startActivity(intent);
 
 
 
