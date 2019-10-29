@@ -32,7 +32,7 @@ try {
     while (true){
         // test //
         double waiting = inputFromClient1.readDouble();
-        System.out.println("Reading double");
+        System.out.println("Reading double" + waiting);
         // test //
 
         // receive request to play
