@@ -27,7 +27,11 @@ public class Server implements Constants {
                     System.out.println("IP address " + inetAddress.getHostAddress());
 
 
-                   new Thread(new HandleASession(socket)).start();
+                    Socket player1;
+                    Socket player2;
+                    Socket player3;
+                    Socket player4;
+                    new Thread(new HandleASession(player1, player2, player3, player4)).start();
 
                 }
             } catch (IOException e) {
