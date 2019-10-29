@@ -16,6 +16,9 @@ public HandleASession(Socket player1, Socket player2, Socket player3, Socket pla
     this.player4 = player4;
 }
 
+    public HandleASession(Socket player1, Socket player2) {
+    }
+
     public void run() {
 try {
     // input streams for 4 clients
@@ -41,16 +44,16 @@ try {
         System.out.println("Reading double");
         // test //
 
-        boolean playerFirst = inputFromClient1.readBoolean();
+        double playerFirst = inputFromClient1.readDouble();
         System.out.println("Reading boolean playerFirst");
 
-        boolean playerSecond = inputFromClient2.readBoolean();
+        double playerSecond = inputFromClient2.readDouble();
         System.out.println("Reading boolean playerSecond");
 
-        boolean playerThird = inputFromClient3.readBoolean();
+        double playerThird = inputFromClient3.readDouble();
         System.out.println("Reading boolean playerThird");
 
-        boolean playerForth = inputFromClient4.readBoolean();
+        double playerForth = inputFromClient4.readDouble();
         System.out.println("Reading boolean playerForth");
 
         // receive request to play
@@ -59,13 +62,13 @@ try {
 
         // if 2 people in 1 room, start the game
 
-        if (playerFirst == true && playerSecond == true){
+        if (playerFirst == 1 && playerSecond == 2){
             // start the game in one specific room
             System.out.println("First and Second player have requested to play");
 
         }
 
-        if (playerThird == true && playerForth == true){
+        if (playerThird == 3 && playerForth == 4){
 
             // start another game in another specific room
             System.out.println("Third and Forth player have requested to play");
