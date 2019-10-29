@@ -9,7 +9,7 @@ private Socket player2;
 private Socket player3;
 private Socket player4;
 
-public HandleASession(Socket player1, Socket player2, Socket player3, Socket player4){
+public HandleASession(Socket player1, Socket player2){
     this.player1 = player1;
     this.player2 = player2;
     this.player3 = player3;
