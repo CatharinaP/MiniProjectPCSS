@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args){
-        System.out.println("Class Client is wokring pls");
+        System.out.println("Class Client is working pls");
         Scanner input = new Scanner (System.in);
         boolean connect = true;
 
@@ -22,6 +22,10 @@ public class Client {
 
             while (connect){
                 System.out.print("While connected...");
+
+                
+
+
             }
         } catch (IOException ex){
             System.out.println("ex");
