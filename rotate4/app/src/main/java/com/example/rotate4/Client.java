@@ -22,11 +22,20 @@ public class Client {
 
             while (connect){
                 System.out.print("While connected...");
-                outputStream.writeDouble(12);
-                
+                outputStream.writeDouble(1);
+                System.out.print("Sending double '1' to server for defining ");
 
-                
+                double warOfficer = inputStream.readDouble();
+                double intelligens = inputStream.readDouble();
 
+                if (warOfficer == 10){
+                    // change the screen with intent
+                }
+
+                if (intelligens == 20) {
+                    // change the screen with intent
+                }
+                
 
             }
         } catch (IOException ex){

@@ -34,7 +34,7 @@ public class Server implements Constants {
                     System.out.println("Client no " + clientNo);
                     System.out.println("host name " + inetAddress2.getHostName());
                     System.out.println("IP address " + inetAddress2.getHostAddress());
-                    
+
                     new Thread(new HandleASession(player1, player2)).start();
 
                 }
