@@ -17,21 +17,29 @@ public class Server implements Constants {
 
 
                 while (true){
-                    Socket socket = serverSocket.accept();
+                    Socket player1 = serverSocket.accept();
                     clientNo++;
-                    System.out.println("Client connected");
+                    System.out.println("Client 1 connected");
 
-                    InetAddress inetAddress = socket.getInetAddress();
+                    InetAddress inetAddress1 = player1.getInetAddress();
                     System.out.println("Client no " + clientNo);
-                    System.out.println("host name " + inetAddress.getHostName());
-                    System.out.println("IP address " + inetAddress.getHostAddress());
+                    System.out.println("host name " + inetAddress1.getHostName());
+                    System.out.println("IP address " + inetAddress1.getHostAddress());
 
 
-                    Socket player1;
-                    Socket player2;
-                    Socket player3;
-                    Socket player4;
-                    new Thread(new HandleASession(player1, player2, player3, player4)).start();
+                    Socket player2 = serverSocket.accept();
+                    System.out.println("Client 2 connected");
+
+                    InetAddress inetAddress2 = player2.getInetAddress();
+                    System.out.println("Client no " + clientNo);
+                    System.out.println("host name " + inetAddress2.getHostName());
+                    System.out.println("IP address " + inetAddress2.getHostAddress());
+
+                    //Socket player1;
+                    //Socket player2;
+                    //Socket player3;
+                    //Socket player4;
+                    new Thread(new HandleASession(player1, player2)).start();
 
                 }
             } catch (IOException e) {
