@@ -67,12 +67,14 @@ public class Client extends AppCompatActivity {
         public void run() {
             try {
                 System.out.println("Inside try");
-                Socket s = new Socket("192.168.8.104", 7500);
+                Socket s = new Socket("192.168.43.180", 7500);
                 System.out.println("Connected to server");
 
 
                 DataInputStream inputStream = new DataInputStream(s.getInputStream());
                 DataOutputStream outputStream = new DataOutputStream(s.getOutputStream());
+                System.out.println("Data Streams established");
+
 
                 while (connect) {
                     System.out.print("While connected...");
