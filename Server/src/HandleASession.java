@@ -16,15 +16,17 @@ public HandleASession(Socket player1, Socket player2){
         try {
             // input streams for 2 clients
             // another commit
-
+            System.out.println("Server try");
             DataInputStream inputFromClient1 = new DataInputStream(player1.getInputStream());
             DataInputStream inputFromClient2 = new DataInputStream(player2.getInputStream());
+            System.out.println("Establishing Input Streams");
 
 
             // output streams for 2 clients
 
             DataOutputStream outputToClient1 = new DataOutputStream(player1.getOutputStream());
             DataOutputStream outputToClient2 = new DataOutputStream(player2.getOutputStream());
+            System.out.println("Establishing Output Streams");
 
 
             // for serving the client
@@ -44,9 +46,9 @@ public HandleASession(Socket player1, Socket player2){
 
                     // if 2 people in 1 room, start the game
 
-                    if (fromPlayerFirst == 1 ){
+                    if (fromPlayerFirst == 1 && fromPlayerSecond == 1){
 
-                        // && fromPlayerSecond == 1
+
                         // start the game in one specific room
                         System.out.println("First and Second player have requested to play");
 
@@ -56,7 +58,7 @@ public HandleASession(Socket player1, Socket player2){
                         System.out.println("Player1 a War Officer");
 
                         // assigning character
-                        // sending to server "20" meaning player2 will be an Intelligens
+                         //sending to server "20" meaning player2 will be an Intelligens
                         outputToClient2.writeDouble(20);
                         System.out.println("Player2 an Intelligens");
 

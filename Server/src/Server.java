@@ -36,6 +36,7 @@ public class Server implements Constants {
                     System.out.println("IP address " + inetAddress2.getHostAddress());
 
                     new Thread(new HandleASession(player1, player2)).start();
+                    System.out.println("Thread created");
 
                 }
             } catch (IOException e) {
