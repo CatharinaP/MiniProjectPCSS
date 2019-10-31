@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
+import android.view.WindowManager;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -14,15 +16,16 @@ import java.util.Scanner;
 public class Client extends AppCompatActivity {
     boolean connect = true;
 
-   // boolean turing = Puzzle.isData();
-
-    // boolean tData = turing.isData();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.client);
+
         System.out.println("Class Client is working pls");
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_client);
 
           /*  try {
                 System.out.println("Inside try");
