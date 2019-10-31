@@ -81,15 +81,19 @@ public class Client extends AppCompatActivity {
                     outputStream.writeDouble(1);
                     System.out.print("Sending double '1' to server for defining ");
 
-                    double warOfficer = inputStream.readDouble();
-                    double intelligens = inputStream.readDouble();
+                    outputStream.flush();
 
-                    if (warOfficer == 10) {
+                    double character = inputStream.readDouble();
+                    //double intelligens = inputStream.readDouble();
+
+
+
+                    if (character == 10) {
                         // change the screen with intent
                         startwar();
                     }
 
-                    if (intelligens == 20) {
+                    if (character == 20) {
                         // change the screen with intent
                         startintel();
                     }
