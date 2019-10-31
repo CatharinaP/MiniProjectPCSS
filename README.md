@@ -15,17 +15,22 @@ Server is made in IntelliJ IDEA but the Client part in Android Studio. The game 
 
 2. In order to run the server, Java IDE is needed. For example an Eclipse IDE for Java Developers or IntelliJ IDEA. The group has used IntelliJ IDEA for the developing the program. It can be downloaded through https://www.jetbrains.com/idea/ following the guide provided within the webpage. 
 
-3. ... 
+3. When the download has been done, the folder named "Server" should be opened through the Java IDE. 
 
-4. ... 
+4. Make sure server can run before starting to set up the Client side. If it prints out a line "Server is running" it is set up for starting the game.  
 
 # Step by step guide on how to set up the Client part 
 
 1. As the repository is already downloaded, first step for making sure Client part can be running, is to download Android studio. That can be done through this link > https://developer.android.com/studio 
 
-2. ...
+2. When the download has been done, the folder named "rotate4" should be opened through the Android Studio. 
 
-3. ...
+3. Install the programm in the phone by running it while Android phone is connected to the computer through USB. One should remember to enable Developers mode on phone. 
+
+4. Phones should be connected to the same hotspot as the computer and the IP adress ("???.???.??.???.") should be written in Client class where it says 
+Socket s = new Socket ("192.168.??.???", port 7500);
+
+5. Check if server is running and run the game from Android Studio. It is now able to connect from the phones to server.  
 
 # Gameplay
 
