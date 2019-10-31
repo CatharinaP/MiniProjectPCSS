@@ -13,14 +13,84 @@ import java.util.Scanner;
 
 public class Client extends AppCompatActivity {
     boolean connect = true;
-    Puzzle turing = new Puzzle();
-    boolean tData = turing.isData();
+    boolean turing = Puzzle.isData();
+
+    // boolean tData = turing.isData();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.client);
         System.out.println("Class Client is working pls");
+
+          /*  try {
+                System.out.println("Inside try");
+                Socket s = new Socket("192.168.43.180", 7500);
+                System.out.println("Connected to server");
+
+
+                DataInputStream inputStream = new DataInputStream(s.getInputStream());
+                DataOutputStream outputStream = new DataOutputStream(s.getOutputStream());
+                System.out.println("Data Streams established");
+
+
+                while (connect) {
+                    System.out.print("While connected...");
+                    outputStream.writeDouble(1);
+                    System.out.print("Sending double '1' to server for defining ");
+
+                    outputStream.flush();
+
+                    double character = inputStream.readDouble();
+                    //double intelligens = inputStream.readDouble();
+
+
+
+                    if (character == 10) {
+                        // change the screen with intent
+                        System.out.println("character 1 selected");
+                        startwar();
+                    }
+
+                    if (character == 20) {
+                        // change the screen with intent
+                        System.out.println("character 2 selected");
+                        startintel();
+                    }
+
+                    System.out.println("tData is " +tData);
+
+                    tData = turing.isData();
+
+                    if (tData == true){
+                        System.out.println("Checked Data returned True");
+                        outputStream.writeDouble(4);
+
+
+                    } else{
+                        System.out.println("Checked Data returned False");
+
+
+                    }
+
+
+                    System.out.println("Pre-end game check");
+                    double endGame = inputStream.readDouble();
+                    System.out.println("endGame data");
+                    if (endGame == 5){
+
+                        endScreen();
+                        connect=false;
+                    }
+
+
+
+                }
+            } catch (IOException ex) {
+                System.out.println("ex");
+            } */
+
+
         //Scanner input = new Scanner(System.in);
 
 
@@ -63,11 +133,13 @@ public class Client extends AppCompatActivity {
     }
 
 
-    public class clientThread implements Runnable{
+   public class clientThread implements Runnable{
 
         @Override
         public void run() {
             try {
+
+               // boolean tData = turing.isData();
                 System.out.println("Inside try");
                 Socket s = new Socket("192.168.43.180", 7500);
                 System.out.println("Connected to server");
@@ -92,24 +164,47 @@ public class Client extends AppCompatActivity {
 
                     if (character == 10) {
                         // change the screen with intent
+                        System.out.println("character 1 selected");
                         startwar();
                     }
 
                     if (character == 20) {
                         // change the screen with intent
+                        System.out.println("character 2 selected");
                         startintel();
                     }
 
-                    if (tData == true){
-                        outputStream.writeDouble(4);
 
-                    }
-                    double endGame = inputStream.readDouble();
-                    if (endGame == 5){
 
-                        endScreen();
-                    }
-                    outputStream.flush();
+                   while(character == 10){
+                       System.out.println("tData is " +turing);
+                       System.out.println("while loop 2");
+                      // tData = turing.isData();
+
+                       if (turing == true){
+                           System.out.println("Checked Data returned True");
+                           outputStream.writeDouble(4);
+
+
+                       } else{
+                           System.out.println("Checked Data returned False");
+
+
+                       }
+
+
+                       System.out.println("Pre-end game check");
+                       double endGame = inputStream.readDouble();
+                       System.out.println("endGame data");
+                       if (endGame == 5){
+
+                           endScreen();
+                           connect=false;
+                       }
+                   } break;
+
+
+
 
 
                 }

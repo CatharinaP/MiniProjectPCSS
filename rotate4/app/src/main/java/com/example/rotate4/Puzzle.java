@@ -14,15 +14,13 @@ public class Puzzle extends AppCompatActivity {
 
         private ImageView achievBox;
 
-    public boolean isData() {
-        return data;
-    }
 
     public void setData(boolean data) {
+        System.out.println("Setting Data in Puzzle");
         this.data = data;
     }
 
-    boolean data;
+    static boolean data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -72,7 +70,6 @@ public class Puzzle extends AppCompatActivity {
             public void onClick(View v) {
                 if(PickerOne.getValue()==5 && PickerTwo.getValue()==1 && PickerThree.getValue()==0 && PickerFour.getValue()==3 && PickerFive.getValue()==5 && PickerSix.getValue()==4){
 
-
                     //Animates the fade in over 1500 milliseconds
                     achievBox.animate().alpha(1f).setDuration(1500);
 
@@ -88,7 +85,11 @@ public class Puzzle extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     nextPage();
+                                    System.out.println("Data is" +isData());
                                     setData(true);
+                                    System.out.println("Data is" +isData());
+
+
                                 }
                             }, 2000);
                         }
@@ -108,5 +109,12 @@ public class Puzzle extends AppCompatActivity {
         Intent intent = new Intent(this, DesktopWar.class);
         startActivity(intent);
     }
+
+    public static boolean isData() {
+        System.out.println("Sending Data from Puzzle");
+
+        return data;
+    }
+
 
 }
