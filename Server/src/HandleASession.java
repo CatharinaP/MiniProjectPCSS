@@ -62,6 +62,14 @@ public HandleASession(Socket player1, Socket player2){
                         outputToClient2.writeDouble(20);
                         System.out.println("Player2 an Intelligens");
 
+                        double turing = inputFromClient1.readDouble();
+                        if (turing == 4){
+                            outputToClient1.writeDouble(5);
+                            outputToClient2.writeDouble(5);
+
+                        }
+                        
+
                 }
 
 

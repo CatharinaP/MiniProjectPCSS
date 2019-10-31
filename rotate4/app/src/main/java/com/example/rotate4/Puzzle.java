@@ -13,6 +13,16 @@ import android.widget.NumberPicker;
 public class Puzzle extends AppCompatActivity {
 
         private ImageView achievBox;
+
+    public boolean isData() {
+        return data;
+    }
+
+    public void setData(boolean data) {
+        this.data = data;
+    }
+
+    boolean data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -62,6 +72,7 @@ public class Puzzle extends AppCompatActivity {
             public void onClick(View v) {
                 if(PickerOne.getValue()==5 && PickerTwo.getValue()==1 && PickerThree.getValue()==0 && PickerFour.getValue()==3 && PickerFive.getValue()==5 && PickerSix.getValue()==4){
 
+
                     //Animates the fade in over 1500 milliseconds
                     achievBox.animate().alpha(1f).setDuration(1500);
 
@@ -77,6 +88,7 @@ public class Puzzle extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     nextPage();
+                                    setData(true);
                                 }
                             }, 2000);
                         }

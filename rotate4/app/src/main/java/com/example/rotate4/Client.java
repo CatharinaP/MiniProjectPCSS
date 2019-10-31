@@ -13,6 +13,8 @@ import java.util.Scanner;
 
 public class Client extends AppCompatActivity {
     boolean connect = true;
+    Puzzle turing = new Puzzle();
+    boolean tData = turing.isData();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,17 @@ public class Client extends AppCompatActivity {
                         startintel();
                     }
 
+                    if (tData == true){
+                        outputStream.writeDouble(4);
+
+                    }
+                    double endGame = inputStream.readDouble();
+                    if (endGame == 5){
+
+                        endScreen();
+                    }
+                    outputStream.flush();
+
 
                 }
             } catch (IOException ex) {
@@ -113,6 +126,11 @@ public class Client extends AppCompatActivity {
 
     void startintel(){
         Intent intent = new Intent(this,Desktop.class);
+        startActivity(intent);
+    }
+
+    void endScreen(){
+        Intent intent = new Intent(this,EndScreen.class);
         startActivity(intent);
     }
 }
