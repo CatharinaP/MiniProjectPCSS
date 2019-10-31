@@ -70,6 +70,9 @@ public class Puzzle extends AppCompatActivity {
             public void onClick(View v) {
                 if(PickerOne.getValue()==5 && PickerTwo.getValue()==1 && PickerThree.getValue()==0 && PickerFour.getValue()==3 && PickerFive.getValue()==5 && PickerSix.getValue()==4){
 
+                    final GlobalVar globalvar1 = (GlobalVar) getApplicationContext();
+                    globalvar1.setStatus(true);
+
                     //Animates the fade in over 1500 milliseconds
                     achievBox.animate().alpha(1f).setDuration(1500);
 
@@ -84,10 +87,10 @@ public class Puzzle extends AppCompatActivity {
                             achievBox.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    nextPage();
-                                    System.out.println("Data is" +isData());
-                                    setData(true);
-                                    System.out.println("Data is" +isData());
+                                    //nextPage();
+                                    //System.out.println("Data is" +isData());
+                                    //setData(true);
+                                    //System.out.println("Data is" +isData());
 
 
                                 }

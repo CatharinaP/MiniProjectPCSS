@@ -13,7 +13,8 @@ import java.util.Scanner;
 
 public class Client extends AppCompatActivity {
     boolean connect = true;
-    boolean turing = Puzzle.isData();
+
+   // boolean turing = Puzzle.isData();
 
     // boolean tData = turing.isData();
 
@@ -176,36 +177,29 @@ public class Client extends AppCompatActivity {
 
 
 
-                   while(character == 10){
-                       System.out.println("tData is " +turing);
+                    while(character == 10){
+                       final GlobalVar globalvar1 = (GlobalVar) getApplicationContext();
+                       System.out.println("Status is " + globalvar1.getStatus());
                        System.out.println("while loop 2");
                       // tData = turing.isData();
 
-                       if (turing == true){
-                           System.out.println("Checked Data returned True");
+                       if (globalvar1.getStatus() == true){
+                           System.out.println("Checked Status returned True");
                            outputStream.writeDouble(4);
 
-
                        } else{
-                           System.out.println("Checked Data returned False");
-
-
+                           System.out.println("Checked Status returned False");
                        }
+                        if ( globalvar1.getStatus() == true ) { break; }  }
 
-
-                       System.out.println("Pre-end game check");
-                       double endGame = inputStream.readDouble();
-                       System.out.println("endGame data");
-                       if (endGame == 5){
-
-                           endScreen();
-                           connect=false;
-                       }
-                   } break;
-
-
-
-
+                    System.out.println("Pre-end game check");
+                    double endGame = inputStream.readDouble();
+                    System.out.println("endGame data");
+                    if (endGame == 5){
+                        System.out.println("5 check");
+                        endScreen();
+                        connect=false;
+                    }
 
                 }
             } catch (IOException ex) {
