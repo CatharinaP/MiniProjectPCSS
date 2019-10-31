@@ -1,9 +1,11 @@
 # Introduction 
-"Codename: ULTRA" is a two player game where both players gets different information presented. The game was originally developed in P2 but is now being simplified to one simple riddle which is being used for this mini-project. In order to play the game, a server needs to be running before running the clients. 
+"Codename: ULTRA" is a two player game where both players gets different information presented on their virtual device. The game was originally developed for a P2 project but is now being modified to one simple riddle which is being used for this mini-project. 
 
-When the server is running, players can join the game. Two players can play together and any more players willing to join, can play in pairs seperately from other pairs. 
+In order to play the game, a server needs to be running before running the clients. When the server is running, players can join the game. Two players can play together and any more players willing to join, can play in pairs seperately from other pairs. 
 
-Each player is assigned to one of the two roles: War officer or Intelligence officer. War officer has to finish a puzzle while Intelligence officer is offering support by providing information from the screen visible for only the Intelligence officer. The actual game "Codename: ULTRA" consists of many more puzzles when both parts are more involved with the game process. In this verion only a part of it represented. 
+When the game is installed on the phones and the 2 players have pressed the play button then is each player is assigned to one of the two roles: War officer or Intelligence officer. The game can be finished by the collaberation beetween War officer and Inteligence officer, by the the intelligence officer opening the peom on their table, and War officer using the code on his table. together they would spell out the sentence "The name of a briliant mind". Then the players would have to discuss the meaning of this sentence and what the meaning of this could be, when they have found a possible solution, then the war officer go to the box on his desktop and spell out what he thinks is the answer. If the war officer spell out "TURING" then the game is won.
+
+The mini projects riddle is just one out of the actual game "Codename: ULTRA" which consists of many more puzzles when both parts are more involved with the game process.For the mini project this riddle was only presented as a teaser for the full game. 
 
 Server is made in IntelliJ IDEA but the Client part in Android Studio. The game can run on an Android phone or a simulator within the Android Studio. 
 
