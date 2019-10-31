@@ -1,5 +1,5 @@
 # Introduction 
-"Codename: ULTRA" is a multiplayer game that was developed in P2 but now a part of it has been used for this mini-project. In order to play the game, a server needs to be running beforehand. 
+"Codename: ULTRA" is a two player game where both players gets different information presented. The game was originally developed in P2 but is now being simplified to one simple riddle which is being used for this mini-project. In order to play the game, a server needs to be running before running the clients. 
 
 When the server is running, players can join the game. Two players can play together and any more players willing to join, can play in pairs seperately from other pairs. 
 
