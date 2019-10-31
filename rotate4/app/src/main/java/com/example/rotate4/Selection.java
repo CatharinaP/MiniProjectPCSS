@@ -13,7 +13,6 @@ public class Selection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         System.out.println("Class Selection is working");
-       // Log.d("myTag", "This is my message");
 
 
         //three first lines hide the bars, same in all activities
@@ -26,13 +25,13 @@ public class Selection extends AppCompatActivity {
 
     }
 
-    public void startWar(View view){
-        Intent intent= new Intent(this, DesktopWar.class);
+    public void startWar(View view) {
+        Intent intent = new Intent(this, DesktopWar.class);
         startActivity(intent);
     }
 
-    public void startInt(View view){
-        Intent intent= new Intent(this, Desktop.class);
+    public void startInt(View view) {
+        Intent intent = new Intent(this, Desktop.class);
         startActivity(intent);
     }
 }

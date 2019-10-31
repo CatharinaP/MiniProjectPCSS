@@ -12,7 +12,7 @@ import android.widget.NumberPicker;
 
 public class Puzzle extends AppCompatActivity {
 
-        private ImageView achievBox;
+    private ImageView achievBox;
 
 
     public void setData(boolean data) {
@@ -21,6 +21,7 @@ public class Puzzle extends AppCompatActivity {
     }
 
     static boolean data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -32,7 +33,7 @@ public class Puzzle extends AppCompatActivity {
 
         //Picker for TURING box
         final NumberPicker PickerOne = findViewById(R.id.Picker1); //refer to picker number 1
-        String[] PickerOneLetters = {"A","B","C","E","P","T"};     //a string of letters
+        String[] PickerOneLetters = {"A", "B", "C", "E", "P", "T"};     //a string of letters
         PickerOne.setMaxValue(5);                                  //the string cannot have more than 6 spots (0-5)
         PickerOne.setDisplayedValues(PickerOneLetters);            //display the letters in picker 1
 
@@ -68,7 +69,7 @@ public class Puzzle extends AppCompatActivity {
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(PickerOne.getValue()==5 && PickerTwo.getValue()==1 && PickerThree.getValue()==0 && PickerFour.getValue()==3 && PickerFive.getValue()==5 && PickerSix.getValue()==4){
+                if (PickerOne.getValue() == 5 && PickerTwo.getValue() == 1 && PickerThree.getValue() == 0 && PickerFour.getValue() == 3 && PickerFive.getValue() == 5 && PickerSix.getValue() == 4) {
 
                     final GlobalVar globalvar1 = (GlobalVar) getApplicationContext();
                     globalvar1.setStatus(true);
@@ -87,10 +88,6 @@ public class Puzzle extends AppCompatActivity {
                             achievBox.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    //nextPage();
-                                    //System.out.println("Data is" +isData());
-                                    //setData(true);
-                                    //System.out.println("Data is" +isData());
 
 
                                 }
@@ -102,21 +99,15 @@ public class Puzzle extends AppCompatActivity {
         });
     }
 
-    public void nextPage(){
+    public void nextPage() {
         Intent intent = new Intent(this, EndScreen.class);
         startActivity(intent);
     }
 
     //back to desktop
-    public void back(View view){
+    public void back(View view) {
         Intent intent = new Intent(this, DesktopWar.class);
         startActivity(intent);
-    }
-
-    public static boolean isData() {
-        System.out.println("Sending Data from Puzzle");
-
-        return data;
     }
 
 

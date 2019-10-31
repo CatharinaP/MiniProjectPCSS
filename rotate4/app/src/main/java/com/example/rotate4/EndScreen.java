@@ -18,8 +18,8 @@ public class EndScreen extends AppCompatActivity {
         setContentView(R.layout.activity_endscreen);
     }
 
-    public void endGame(View view){
-        Intent intent= new Intent(this, MainActivity.class);
+    public void endGame(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }
