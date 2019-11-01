@@ -40,6 +40,14 @@ To complete the game, the intelligence officer is opening the poem on their tabl
 
 
 #  UML class, use case, and sequence diagrams
-Sequence diagram:
-![Sequence Diagram](https://github.com/CatharinaP/MiniProjectPCSS/blob/master/sequenceDiagram.jpg)
+### Class diagram:
 
+![Class Diagram](https://github.com/CatharinaP/MiniProjectPCSS/blob/master/class_diagram.jpg)
+
+### Use case diagram:
+
+![Use Case Diagram](https://github.com/CatharinaP/MiniProjectPCSS/blob/master/use%20case.jpg)
+
+### Sequence diagram:
+
+![Sequence Diagram](https://github.com/CatharinaP/MiniProjectPCSS/blob/master/sequenceDiagram.jpg)
