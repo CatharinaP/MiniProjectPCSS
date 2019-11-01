@@ -1,3 +1,10 @@
+/////
+
+//THIS CLASS IS NOT USED IN THIS VERSION OF THE GAME
+
+
+
+/////
 package com.example.rotate4;
 
 import android.content.ComponentName;

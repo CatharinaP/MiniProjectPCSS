@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    //function to send the players to the Client class
     public void startGame(View view) {
         System.out.println("Connecting to server");
         Intent intent1 = new Intent(this, Client.class);

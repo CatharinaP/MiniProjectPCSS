@@ -70,7 +70,7 @@ public class Puzzle extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (PickerOne.getValue() == 5 && PickerTwo.getValue() == 1 && PickerThree.getValue() == 0 && PickerFour.getValue() == 3 && PickerFive.getValue() == 5 && PickerSix.getValue() == 4) {
-
+                    //sets the global variable to true
                     final GlobalVar globalvar1 = (GlobalVar) getApplicationContext();
                     globalvar1.setStatus(true);
 
