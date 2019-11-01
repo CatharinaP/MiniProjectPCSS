@@ -3,8 +3,9 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-class HandleASession implements Runnable, Constants {
-private Socket player1; // a connected socket
+class HandleASession implements Runnable{
+//create a socket for both players
+private Socket player1;
 private Socket player2;
 
 public HandleASession(Socket player1, Socket player2){
@@ -14,54 +15,40 @@ public HandleASession(Socket player1, Socket player2){
 
     public void run() {
         try {
-            // input streams for 2 clients
-            // another commit
-            System.out.println("Server try");
+            // input streams for 2 players
             DataInputStream inputFromClient1 = new DataInputStream(player1.getInputStream());
             DataInputStream inputFromClient2 = new DataInputStream(player2.getInputStream());
             System.out.println("Establishing Input Streams");
 
 
-            // output streams for 2 clients
-
+            // output streams for 2 players
             DataOutputStream outputToClient1 = new DataOutputStream(player1.getOutputStream());
             DataOutputStream outputToClient2 = new DataOutputStream(player2.getOutputStream());
             System.out.println("Establishing Output Streams");
 
 
-            // for serving the client
+            // while the server is connected to the client it runs the while loop
             while (true){
-                // test //
-                //double waiting = inputFromClient1.readDouble();
-                //System.out.println("Reading double" + waiting);
-                // test //
-
                 // receive request to play
-
                 double fromPlayerFirst = inputFromClient1.readDouble();
                 System.out.println("Reading double playerFirst");
 
                 double fromPlayerSecond = inputFromClient2.readDouble();
                 System.out.println("Reading double playerSecond");
 
-                    // if 2 people in 1 room, start the game
-
+                    // if the server receives input from two clients (fromPlayerFirst and fromPlayerSecond)
                     if (fromPlayerFirst == 1 && fromPlayerSecond == 1){
-
-
-                        // start the game in one specific room
-                        System.out.println("First and Second player have requested to play");
-
                         // assigning character
-                        // sending to server "10" meaning player1 will be a War Officer
+                        // sending to client "10" meaning player1 will be the War Officer
                         outputToClient1.writeDouble(10);
-                        System.out.println("Player1 a War Officer");
+                        System.out.println("Player1 is the War Officer");
 
                         // assigning character
-                         //sending to server "20" meaning player2 will be an Intelligens
+                         //sending to client "20" meaning player2 will be the Intelligence officer
                         outputToClient2.writeDouble(20);
-                        System.out.println("Player2 an Intelligens");
+                        System.out.println("Player2 is the Intelligence officer");
 
+                        //when the war officer solve the puzzle the server will receive "4", and send "5" to both clients
                         double turing = inputFromClient1.readDouble();
                         if (turing == 4){
                             outputToClient1.writeDouble(5);
@@ -71,16 +58,6 @@ public HandleASession(Socket player1, Socket player2){
                         
 
                 }
-
-
-                // data exchange between the client and server
-
-                // based on information from client 1, send the message to client 2
-
-                //  String messageFromClient1 = inputFromClient1.readString();
-
-               // OutputToClient2.writeString(messageFromClient1);
-
             }
 
             }    catch (IOException e) {
