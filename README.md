@@ -7,9 +7,9 @@ When the game is installed on the phones and the 2 players have pressed the play
 
 The mini project's puzzle is just one out of the actual game "Codename: ULTRA" which consists of many more puzzles. For the mini project this puzzle was only presented as a teaser for the full game. 
 
-A server is made in IntelliJ IDEA but the Client part in Android Studio. The game can run on an Android phone or an emulator within Android Studio. 
+The server is made in IntelliJ IDEA and the Client in Android Studio. The game can run on an Android phone or an emulator within Android Studio. 
 
-# Step by step guide on how to set up the Server part
+# Step by step guide on how to set up the Server
 
 1. Download the repository to your computer as a zip file and unzip it. 
 
@@ -17,15 +17,15 @@ A server is made in IntelliJ IDEA but the Client part in Android Studio. The gam
 
 3. When the download has been completed, the folder named "Server" should be opened through the Java IDE. 
 
-4. Make sure the server can run before starting the Client side. If it prints out the line "Server is running" it is set up for starting the game.  
+4. Make sure the server can run before starting the Client. If it prints out the line "Server is running" it is set up for starting the game.  
 
-# Step by step guide on how to set up the Client part 
+# Step by step guide on how to set up the Client
 
-1. As the repository is already downloaded, the first step to make sure the Client part will run, is to download Android studio. That can be done through this link > https://developer.android.com/studio 
+1. As the repository is already downloaded, the first step to make sure the Client will run, is to download Android studio. That can be done through this link > https://developer.android.com/studio 
 
 2. When the download has been completed, the folder named "rotate4" should be opened through Android Studio. 
 
-3. Install the programm on the phone (With Android OS) by running it while it is connected to the computer through USB. One should remember to enable Developers options -> USB Debugging on the device. 
+3. Install the program on the phone (With Android OS) by running it while it is connected to the computer through USB. One should remember to enable Developers options -> USB Debugging on the device. 
 
 4. The phones should be connected to the same hotspot as the computer and the IP adress ("???.???.??.???.") should be written in the Client class where it says: 
 Socket s = new Socket ("192.168.??.???", port 7500);
